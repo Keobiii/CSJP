@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <header>
+        <img src="img/CSJP LOGO.png" alt="">
+        <ul>
+            <li><a href="#body">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="https://elearning.csjpii.edu.ph/" target="_blank">E-Learning</a></li>
+            <li><a href="#signup">Sign Up</a></li>
+        </ul>
+    </header>
+        <div class="content">
+            <span class="welcome">Welcome</span>
+            <h1>PAULIANS</h1>
+            <div class="form">
+                <div class="user-input">
+                    <input type="text" id="student" required>
+                    <span>Student Number</span>
+                    <p>Example: S02-0002</p>
+                </div>
+                <div class="user-input">
+                    <input type="password" id="password" required>
+                    <span>Birth Date</span>
+                    <p>Example: 2002-02-20</p>
+                    <img src="img/hide.png" alt="" id="icon" onclick="showPassword()">
+                </div>
+    
+                <button onclick="login()">Log in</button>
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="carousel">
+            <div class="card">
+                <img src="img/slider-img1.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src="img/slider-img2.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src="img/slider-img3.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src="img/slider-img2.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src="img/slider-img1.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src="img/slider-img3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="content-about" id="about">
+        <h1 class="about">ABOUT</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex commodi hic quod, nesciunt est eveniet molestiae nulla tempore labore vel,
+             eaque sequi! Optio ipsa veritatis aliquam sunt reprehenderit cum voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eaque praesentium at necessitatibus quis excepturi quae sapiente inventore sed iusto! Reprehenderit autem officiis tempora? 
+              Minima animi ullam a aliquam ipsum obcaecati? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati dolorum quas illo 
+              fugiat hic, aliquid quaerat neque cum eos molestiae cupiditate, reiciendis adipisci. Praesentium quibusdam dignissimos adipisci, 
+              quaerat voluptate unde?</p>
+        <h1 class="offer">COURSES/PROGRAM OFFERS</h1>
+        <div class="senior">
+            <h1>SENIOR HIGH SCHOOL:</h1>
+                 <h2>ACADEMIC STRAND</h2>
+                    <ul>
+                        <li><a href="" target="_blank">Humanities And Social Sciences</a><span>(HUMSS)</span></li>
+                        <li><a href="" target="_blank">Science, Technology, Engineering, And Mathematics</a><span>(STEM)</span></li>
+                        <li><a href="" target="_blank">Accountancy, Business And Management</a><span>(ABM)</span></li>
+                    </ul>
+                <h2>TVL STRAND</h2>
+                    <ul>
+                        <li><a href="program.html" target="_blank">Information And Communications Technology</a><span>(ICT)</span></li>
+                        <li><a href="program.html" target="_blank">Home Economics</a><span>(HE)</span></li>
+                   </ul>
+        </div>
+
+        <div class="college">
+            <h1>COLLEGE PROGRAMS:</h1>
+                 <h2>BACHELOR OF SCIENCE DEGREE PROGRAMS</h2>
+                    <ul>
+                        <li><a href="" target="_blank">Bachelor of Science In Computer Science</a><span>(BSCS)</span></li>
+                        <li><a href="" target="_blank">Bachelor of Science In Entrepreneurship</a><span>(BSE)</span></li>
+                        <li><a href="" target="_blank">Bachelor of Science In Office Administration</a><span>(BSOA)</span></li>
+                        <li><a href="" target="_blank">Bachelor of Science In Accounting Information System</a><span>(BSAIS)</span></li>
+                        <li><a href="" target="_blank">Bachelor of Science In Tourism Management</a><span>(BSTM)</span></li>
+                        <li><a href="" target="_blank">Bachelor of Science In Technical Teacher Education</a><span>(BSTTE)</span></li>                    
+                    </ul>
+        </div>
+
+        <h1 class="hiring">WE'RE HIRING!!!</h1>
+        <div class="qualification">
+            <div class="shape"></div>
+            <h2>COLLEGE OF BUSINESS ADMINISTRATION DEAN</h2>
+                <ul>
+                    <li>Holder of Master's Degree in Business Administrationor allied field.</li>
+                    <li>With 3 years of very satisfactory teaching experience in business administration/teacher education institution.</li>
+                    <li>With 2 years very satisfactory supervisory experience.</li>
+                    <li>Willing to be assigned in Cainta, Rizal</li>
+                </ul>
+        </div>
+        <div class="qualification">
+            <h2>PHYSICAL EDUCATION INSTRUCTOR</h2>
+                <ul>
+                    <li>Must have Bachelor's Degree in Education Major in Physical Education or any related course.</li>
+                    <li>With 3 years of very satisfactory teaching experience in education institution.</li>
+                    <li>Diligent, willing to learn, team player, and hardworking.</li>
+                    <li>Willing to be assigned in Cainta, Rizal</li>
+                </ul>
+        </div>
+        <div class="qualification">
+            <h2>SCIENCE INSTRUCTOR</h2>
+                <ul>
+                    <li>Must have Bachelor's Degree in any related Science or any allied Bachelor's Degree.</li>
+                    <li>With 3 years of very satisfactory teaching experience in education institution.</li>
+                    <li>Diligent, willing to learn, team player, and hardworking.</li>
+                    <li>Willing to be assigned in Cainta, Rizal</li>
+                </ul>
+        </div>
+        <div class="qualification">
+            <h2>TOURSIM INSTRUCTOR</h2>
+                <ul>
+                    <li>Must have Bachelor's Degree in Tourism Management or any related course.</li>
+                    <li>With 3 years of very satisfactory teaching experience in education institution.</li>
+                    <li>Diligent, willing to learn, team player, and hardworking.</li>
+                    <li>Willing to be assigned in Cainta, Rizal</li>
+                </ul>
+        </div>
+
+    </div>
+
+    <div class="content-signup" id="signup">
+        <span class="welcome">Sign Up and Become</span>
+        <h1>PAULIANS</h1>
+        <div class="form">
+            <div class="user-input">
+                <input type="text" id="full_name" required>
+                <span>Full Name</span>
+            </div>
+            <div class="user-input">
+                <input type="text" id="email" required>
+                <span>Email Address</span>
+            </div>
+            <div class="user-input">
+                <input type="text" id="email" required>
+                <span>Contact Number</span>
+            </div>
+
+            <button>Submit</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>

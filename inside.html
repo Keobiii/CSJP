@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="inside.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <header>
+        <img src="img/CSJP LOGO.png" alt="">
+        <ul class="header-ul">
+            <li><a href="#body">Home</a></li>
+            <li><a href="#enrollment">Enrollment</a></li>
+            <li><a href="https://elearning.csjpii.edu.ph/" target="_blank">E-Portal</a></li>
+            <img src="img/CSJP LOGO.png" alt="" id="user" onclick="toggleMenu()">
+        </ul>
+
+        <div class="menu-wrap" id="tabMenu">
+            <div class="menu">
+                <div class="user-info">
+                    <img src="img/CSJP LOGO.png" alt="">
+                    <h2>Welcome!</h2>
+                </div>
+                <hr>
+                <ul class="menu-list" id="menu-list">
+                    <li><p id="info" onclick="showProfile()">Profile</p></li>
+                    <li><p id="info" onclick="showAccounting()">Accounting</p></li>
+                    <li><p id="info" onclick="showSchedule()">Schedule</p></li>
+                    <li><p id="info" onclick="showGrades()">Grade</p></li>
+                    <li><p id="info" onclick="showShop()">Shop</p></li>
+                    <li><a href="index.html" id="info">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="menu-content">
+            <img src="img/close.png"  id="exit" onclick="closeContent()">
+            <div class="list">
+                <ul class="elements">
+                    <img src="img/sponge.png" alt="">
+                    <h1>Keobi Keribu</h1>
+                    <li><p onclick="showProfile()">Profile</p></li>
+                    <li><p onclick="showAccounting()">Accounting</p></li>
+                    <li><p onclick="showSchedule()">Schedule</p></li>
+                    <li><p onclick="showGrades()">Grades</p></li>
+                    <li><p onclick="showShop()">Shop</p></li>
+                </ul>
+            </div>
+            <div class="profile">
+                <h1>Account Settings</h1>
+                <div class="id-template">
+                    <div class="front">
+                        <div class="bg-color"></div>
+                        <div class="bg-color2"></div>
+                        <div class="school-info">
+                            <img src="img/CSJP LOGO.png" alt="" class="school-img">
+                            <p class="school-address">Mercedez Building, Ortigas Ave Ext, Santo Domingo, Cainta, 1900 Rizal</p>
+                        </div>
+                        <div class="username">
+                            <img src="img/sponge.png" alt="">
+                        </div>
+                        <p>S02-0002</p>
+                        <h2>Keobi K. Keribu</h2>
+                        <h3 class="student-teacher">Student III</h3>
+                        <div class="course">
+                            <h3>BSCS 3Y2-1
+                            </h3>
+                        </div>
+                        <h4>Valid for AY: 2022-2023</h4>
+                        
+                    </div>
+                    <div class="back">
+                        <div class="bg-img"></div>
+                        
+                        <h1 class="text">Student Information</h1>
+                        <div class="info">
+                            <p class="location">Metro Manila, Cainta Rizal</p>
+                            <hr>
+                            <p class="address">Address</p>
+                        </div>
+                        <div class="guardian">
+                            <p class="contact">09123456789</p>
+                            <hr>
+                            <p class="label">Guardian</p>
+                        </div>
+                        <div class="student">
+                            <p class="contact">09123456789</p>
+                            <hr>
+                            <p class="name">Student's Number</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                <div class="form-info">
+                    <div class="info">
+                        <input type="text" value="Lebron" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="info">
+                        <input type="text" value="James" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="info">
+                        <input type="text" value="lebronisgoat@gmail.com" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="info">
+                        <input type="text" value="+63 123456789">
+                        <span>Phone Number</span>
+                    </div>
+                    <div class="info">
+                        <input type="text" value="2nd year" required>
+                        <span>Current Year</span>
+                    </div>
+                    <div class="info">
+                        <input type="text" value="Mr. Dela Cruz" required>
+                        <span>Dean</span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="accounting" style="display: none;" id="accounting">
+                <h1>Accounting</h1>
+                <div class="account-info">
+                    <div class="semester">
+                        <select onchange="semesterSelection()">
+                            <option value="0">-Select Semester-</option>
+                            <option value="1">2022-2023 2nd Semester</option>
+                            <option value="2">2022-2023 1st Semester</option>
+                            <option value="3">2021-2022 2nd Semester</option>
+                            <option value="4">2021-2022 1st Semester</option>
+                        </select>
+                        <div class="semester1" id="semester1" style="display: none;">
+                            <table>
+                                <tr>
+                                    <td>Payables:</td>
+                                    <td>Php 20,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Payments:</td>
+                                    <td>Php 15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Balance:</td>
+                                    <td>Php 5,000</td>
+                                </tr>
+                            </table>
+                            <button><img src="img/close.png">View Electronic Statement of Account</button>
+                        </div>
+                        <div class="semester2" id="semester2" style="display: none;">
+                            <table>
+                                <tr>
+                                    <td>Payables:</td>
+                                    <td>Php 18,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Payments:</td>
+                                    <td>Php 15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Balance:</td>
+                                    <td>Php 3,000</td>
+                                </tr>
+                            </table>
+                            <button><img src="img/close.png">View Electronic Statement of Account</button>
+                        </div>
+                        <div class="semester3" id="semester3" style="display: none;">
+                            <table>
+                                <tr>
+                                    <td>Payables:</td>
+                                    <td>Php 18,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Payments:</td>
+                                    <td>Php 15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Balance:</td>
+                                    <td>Php 3,000</td>
+                                </tr>
+                            </table>
+                            <button><img src="img/close.png">View Electronic Statement of Account</button>
+                        </div>
+                        <div class="semester4" id="semester4" style="display: none;">
+                            <table>
+                                <tr>
+                                    <td>Payables:</td>
+                                    <td>Php 18,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Payments:</td>
+                                    <td>Php 15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Balance:</td>
+                                    <td>Php 3,000</td>
+                                </tr>
+                            </table>
+                            <button><img src="img/close.png">View Electronic Statement of Account</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-receipt">
+                    <p class="one">For Payments: Please submit proof of payment to this link: <a href="">Submit Here.</a>
+                    <br><span class="note">Note: (Gmail acccount is required to proceed)</span></p>
+                    
+                    <div class="bank">
+                        <p>
+                            <span>Bank: BDO</span>
+                            <br>
+                            <span>Account name: </span> College of Saint John Paul II Arts and Sciences Inc.
+                            <br>
+                            <span>Account number: </span>000-580-271-331
+                        </p>
+                    </div>
+
+                    <div class="facebook">
+                        <p>PM us on Facebook for clarification: <a href="https://fb.com/csjpii">https://fb.com/csjpii</a></p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="schedule" style="display: none;">
+                <h1>Schedule</h1>
+                <div class="account-schedule">
+                    <div class="sched-semester">
+                        <select onchange="scheduleSelection()">
+                            <option value="0">-Select Semester-</option>
+                            <option value="1">2022-2023 2nd Semester</option>
+                            <option value="2">2022-2023 1st Semester</option>
+                            <option value="3">2021-2022 2nd Semester</option>
+                            <option value="4">2021-2022 1st Semester</option>
+                        </select>
+                        <div class="sched-semester1" id="sched-semester1" style="display: none;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="sched-semester2" id="sched-semester2" style="display: none;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="sched-semester3" id="sched-semester3" style="display: none;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="sched-semester4" id="sched-semester4" style="display: none;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>(PROG 1) Progamming 1</b>
+                                        <br>
+                                        <b>BSCS 2Y2-1</b>
+                                        <br>
+                                        Monday | 10:00 AM - 12:00 PM | RM 203
+                                        <br>
+                                        Instructor: Mr. Dela Cruz
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grades" style="display: none;">
+                <h1>Grades</h1>
+                <div class="account-grade">
+                    <div class="grade-semester">
+                        <select onchange="gradeSelection()">
+                            <option value="0">-Select Semester-</option>
+                            <option value="1">2022-2023 2nd Semester</option>
+                            <option value="2">2022-2023 1st Semester</option>
+                            <option value="3">2021-2022 2nd Semester</option>
+                            <option value="4">2021-2022 1st Semester</option>
+                        </select>
+                        <div class="grade-semester1" id="grade-semester1" style="display: none;">
+                            <table>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Grade</th>
+                                    <th>Instructor</th>
+                                </tr>
+                                <tr>
+                                    <td>(GE 7)
+                                    <br>
+                                    Science, Technology & Society
+                                    </td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 207)
+                                    <br>
+                                    Networking and Communications</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 304)
+                                    <br>
+                                    CS Elective 1</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(GE 6)
+                                    <br>
+                                    Readings in Philippine History</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(GE 9)
+                                    <br>
+                                    Life and Works of Rizal</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(PE 4)
+                                    <br>
+                                    Physical Education 4</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 208)
+                                    <br>
+                                    Architecture and Organization</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 209)
+                                    <br>
+                                    Discrete Structure 2</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="grade-semester2" id="grade-semester2" style="display: none;">
+                            <table>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Grade</th>
+                                    <th>Instructor</th>
+                                </tr>
+                                <tr>
+                                    <td>(GE 7)
+                                    <br>
+                                    Science, Technology & Society
+                                    </td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 207)
+                                    <br>
+                                    Networking and Communications</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 304)
+                                    <br>
+                                    CS Elective 1</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(GE 6)
+                                    <br>
+                                    Readings in Philippine History</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(GE 9)
+                                    <br>
+                                    Life and Works of Rizal</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(PE 4)
+                                    <br>
+                                    Physical Education 4</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 208)
+                                    <br>
+                                    Architecture and Organization</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 209)
+                                    <br>
+                                    Discrete Structure 2</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="grade-semester3" id="grade-semester3" style="display: none;">
+                            <table>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Grade</th>
+                                    <th>Instructor</th>
+                                </tr>
+                                <tr>
+                                    <td>(GE 7)
+                                    <br>
+                                    Science, Technology & Society
+                                    </td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 207)
+                                    <br>
+                                    Networking and Communications</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 304)
+                                    <br>
+                                    CS Elective 1</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(GE 6)
+                                    <br>
+                                    Readings in Philippine History</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(GE 9)
+                                    <br>
+                                    Life and Works of Rizal</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(PE 4)
+                                    <br>
+                                    Physical Education 4</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 208)
+                                    <br>
+                                    Architecture and Organization</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 209)
+                                    <br>
+                                    Discrete Structure 2</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="grade-semester4" id="grade-semester4" style="display: none;">
+                            <table>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Grade</th>
+                                    <th>Instructor</th>
+                                </tr>
+                                <tr>
+                                    <td>(GE 7)
+                                    <br>
+                                    Science, Technology & Society
+                                    </td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 207)
+                                    <br>
+                                    Networking and Communications</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 304)
+                                    <br>
+                                    CS Elective 1</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(GE 6)
+                                    <br>
+                                    Readings in Philippine History</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(GE 9)
+                                    <br>
+                                    Life and Works of Rizal</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(PE 4)
+                                    <br>
+                                    Physical Education 4</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 208)
+                                    <br>
+                                    Architecture and Organization</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                                <tr>
+                                    <td>(CS 209)
+                                    <br>
+                                    Discrete Structure 2</td>
+                                    <td class="mid">1</td>
+                                    <td>Mr. Dela Cruz</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop" style="display: none;">
+                <h1>School Shop</h1>
+                <div class="select">
+                    <div class="mini-navigator">
+                        <ul>
+                            <h2 id="unfrm" onclick="changeBg('unfrm')">Uniform</h2>
+                            <h2 id="tshrt" onclick="changeBg('tshrt')">T-Shirt</h2>
+                        </ul>
+                    </div>
+
+                    <div class="shop-category">
+                        <div class="uniform">
+
+                        </div>
+                        <div class="tshirt" style="display: none;">
+                            <div class="video-slider">
+                                <video src="video/tshirt.mp4" id="video1" autoplay loop></video>
+                                <video src="video/tshirt-2.mp4" id="video2" autoplay loop></video>
+                                <video src="video/longsleeve.mp4" id="video3" autoplay loop></video>
+                            </div>
+                            <div class="control">
+                                <input type="radio" name="videoGroup" onclick="playVideo('video1')" checked>
+                                <input type="radio" name="videoGroup" onclick="playVideo('video2')">
+                                <input type="radio" name="videoGroup" onclick="playVideo('video3')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="content">
+        <h1 class="annoucement">Annoucement & Events</h1>
+        <div class="box">
+            <div class="big-box">
+                <video src="video/Kontrabida.mp4" autoplay controls></video>
+                <div class="info">
+                    <h1>Title</h1>
+                    <div class="member">
+                        <ul>
+                            <li>Juan</li>
+                            <li>Akai</li>
+                            <li>Brody</li>
+                            <li>Andre</li>
+                            <li>Ayton</li>
+                            <li>Jose</li>
+                            <li>Keobi</li>
+                            <li>Keribu</li>
+                            <li>Joy</li>
+                            <li>Chou</li>
+                            <li>Khufra</li>
+                            <li>Alice</li>
+                            <li>Yu Zhong</li>
+                            <li>Beatrix</li>
+                            <li>Johnson</li>
+                            <li>Nana</li>
+                            <li>Kaja</li>
+                        </ul>
+                    </div>
+                    <h3>BSCS 2Y2-1</h3>
+                    <h2>Mr. Dela Cruz</h2>
+                    <p class="prof">Professor</p>
+                </div>
+            </div>
+            <div class="half">
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+                <div class="minor-box">
+                    <h1 class="title">Enrollment</h1>
+                    <h3>July 17, 2023</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque quisquam deleniti quas aliquam. Illum tempora repellat, adipisci labore omnis expedita ad rerum veritatis eum dolor molestias. Ea, aspernatur omnis!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-2" id="enrollment">
+        <h1>Enrollment</h1>
+        <div class="form">
+            <div class="user-input">
+                <input type="text" id="student" required>
+                <span>Student Number</span>
+            </div>
+            <div class="user-input">
+                <input type="text" id="fullname" required>
+                <span>Full Name</span>
+            </div>
+            <div class="user-input">
+                <input type="text" id="email" required>
+                <span>Email Address</span>
+            </div>
+            <div class="user-input">
+                <input type="text" id="contact" required>
+                <span>Contact Number</span>
+            </div>
+            <div class="year-level">
+                <select>
+                    <option value="0">Previous Year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+            </div>
+            <div class="year-level">
+                <select>
+                    <option value="0">Incoming Year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+            </div>
+
+            <button>Submit</button>
+        </div>
+    </div>
+    
+    <script>
+
+        function changeBg(clickedId){
+            const unfrmElement = document.getElementById("unfrm");
+            const tshrtElement = document.getElementById("tshrt");
+
+            if(clickedId === "unfrm"){
+                unfrmElement.style.backgroundColor = "#00194d";
+                tshrtElement.style.backgroundColor = "#04225f";
+            }else if(clickedId === "tshrt"){
+                tshrtElement.style.backgroundColor = "#00194d";
+                unfrmElement.style.backgroundColor = "#04225f";
+            }
+        }
+
+        function playVideo(videoId) {
+        // Pause all videos
+        const videos = document.querySelectorAll('.video-slider video');
+        videos.forEach(video => video.pause());
+
+        // Hide all videos
+        videos.forEach(video => video.style.display = 'none');
+
+        // Display and play the selected video
+        const selectedVideo = document.getElementById(videoId);
+        selectedVideo.style.display = 'block';
+        selectedVideo.play();
+        }
+
+        
+        document.getElementById('unfrm').addEventListener('click', function() {
+        document.querySelector('.uniform').style.display = 'block';
+        document.querySelector('.tshirt').style.display = 'none';
+        });
+
+        document.getElementById('tshrt').addEventListener('click', function() {
+            document.querySelector('.uniform').style.display = 'none';
+            document.querySelector('.tshirt').style.display = 'block';
+        });
+
+
+        function toggleMenu(){
+            var Menu = document.querySelector('.menu-wrap');
+            Menu.classList.toggle('active');
+        }
+
+        function closeContent(){
+            var closeMenu = document.querySelector('.menu-content');
+            closeMenu.classList.remove('active');
+        }
+
+        function showProfile() {
+            var menuContent = document.querySelector('.menu-content');
+            menuContent.classList.add('active');
+
+            document.querySelector('.profile').style.display = 'block';
+            document.querySelector('.accounting').style.display = 'none';
+            document.querySelector('.schedule').style.display = 'none';
+            document.querySelector('.grades').style.display = 'none';
+            document.querySelector('.shop').style.display = 'none';
+    }
+
+        function showAccounting() {
+            var menuContent = document.querySelector('.menu-content');
+            menuContent.classList.add('active');
+
+            document.querySelector('.profile').style.display = 'none';
+            document.querySelector('.accounting').style.display = 'block';
+            document.querySelector('.schedule').style.display = 'none';
+            document.querySelector('.grades').style.display = 'none';
+            document.querySelector('.shop').style.display = 'none';
+        }
+
+        function showSchedule() {
+            var menuContent = document.querySelector('.menu-content');
+            menuContent.classList.add('active');
+
+            document.querySelector('.profile').style.display = 'none';
+            document.querySelector('.accounting').style.display = 'none';
+            document.querySelector('.schedule').style.display = 'block';
+            document.querySelector('.grades').style.display = 'none';
+            document.querySelector('.shop').style.display = 'none';
+        }
+
+        function showGrades() {
+            var menuContent = document.querySelector('.menu-content');
+            menuContent.classList.add('active');
+
+            document.querySelector('.profile').style.display = 'none';
+            document.querySelector('.accounting').style.display = 'none';
+            document.querySelector('.schedule').style.display = 'none';
+            document.querySelector('.grades').style.display = 'block';
+            document.querySelector('.shop').style.display = 'none';
+        }
+        function showShop(){
+            var menuContent = document.querySelector('.menu-content');
+            menuContent.classList.add('active');
+
+            document.querySelector('.profile').style.display = 'none';
+            document.querySelector('.accounting').style.display = 'none';
+            document.querySelector('.schedule').style.display = 'none';
+            document.querySelector('.grades').style.display = 'none';
+            document.querySelector('.shop').style.display = 'block';
+        }
+
+       
+        function semesterSelection(){
+            var selectedValue = document.querySelector('.semester select').value;
+            document.getElementById('semester1').style.display = 'none';
+            document.getElementById('semester2').style.display = 'none';
+            document.getElementById('semester3').style.display = 'none';
+            document.getElementById('semester4').style.display = 'none';
+
+            
+            var paymentReceipt = document.querySelector('.payment-receipt');
+            
+
+            if(selectedValue !=0){
+                document.getElementById('semester' + selectedValue).style.display = 'block';
+                paymentReceipt.style.top = '310px';
+            }else{
+                paymentReceipt.style.top = '160px';
+            }
+        }
+
+        function scheduleSelection(){
+            var selectedValue = document.querySelector('.sched-semester select').value;
+            document.getElementById('sched-semester1').style.display = 'none';
+            document.getElementById('sched-semester2').style.display = 'none';
+            document.getElementById('sched-semester3').style.display = 'none';
+            document.getElementById('sched-semester4').style.display = 'none';
+
+            if(selectedValue !=0){
+                document.getElementById('sched-semester' + selectedValue).style.display = 'block';
+            }else{
+                
+            }
+        }
+
+        
+        function gradeSelection(){
+            var selectedValue = document.querySelector('.grade-semester select').value;
+            document.getElementById('grade-semester1').style.display = 'none';
+            document.getElementById('grade-semester2').style.display = 'none';
+            document.getElementById('grade-semester3').style.display = 'none';
+            document.getElementById('grade-semester4').style.display = 'none';
+            
+            if(selectedValue !=0){
+                document.getElementById('grade-semester' + selectedValue).style.display = 'block';
+            }else{
+                
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080a24;
+    font-family: 'Chivo', sans-serif;
+}
+
+header {
+    position: relative;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #080a24;
+}
+
+header img {
+    position: absolute;
+    width: 90px;
+    top: 10px;
+    left: 100px;
+    z-index: -1;
+}
+
+header ul {
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    list-style: none;
+    text-align: right;
+    z-index: 1;
+}
+
+header ul li {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 1.1em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #c7c7c7;
+    font-size: .9em;
+    transition: .3s ease-in-out;
+}
+
+header ul li a:hover {
+    color: #ffffff;
+}
+
+.content{
+    position: relative;
+    height: 87vh;
+}
+.content .login {
+    position: relative;
+    width: 340px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #080a24;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+}
+
+.content h1 {
+    position: absolute;
+    font-weight: 900;
+    letter-spacing: 20px;
+    top: 30%;
+    left: 50%;
+    color: #00194d;
+    font-size: 7em;
+    transform: translate(-50%, -50%);
+    text-shadow:
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffff,
+    1px 1px 0 #ffffff;
+}
+.content .welcome{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 21%;
+    left: 460px;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 500px;
+}
+.user-input {
+    position: relative;
+    top: 50%;
+    left: 30%;
+    margin-bottom: 20px;
+
+}
+
+.user-input input {
+    width: 200px;
+    height: 35px;
+    margin: 3px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #080a24;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+}
+
+.user-input span {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    font-size: 12px;
+    color: gray;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+}
+
+.user-input input:valid ~ span {
+    transform: translateX(0px) translateY(-7px);
+    font-size: .6em;
+}
+
+.user-input input:valid {
+    padding-top: 23px;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.user-input p {
+    font-size: .7em;
+    font-style: italic;
+    color: gray;
+    text-align: center;
+    width: 40%;
+}
+#icon{
+    width: 4%;
+    position: absolute;
+    top: 10px;
+    left: 170px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.content button {
+    position: relative;
+    top: 270px;
+    left: 151px;
+    width: 40.5%;
+    height: 32.5px;
+    border-radius: 10px;
+    background-color: #0842ab;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.container {
+  height: 100vh;
+  position: relative; 
+}
+.container .carousel {
+    position: absolute;
+    width: 1000px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: hidden;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevents cards from wrapping to the next line */
+    scroll-behavior: smooth; /* Add smooth scrolling behavior */
+    display: flex; /* Use flex layout to contain images */
+}
+.container .carousel::-webkit-scrollbar {
+    height: 10px;
+}
+
+.container .carousel::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 5px;
+}
+
+.card {
+    flex: 0 0 100%; /* Ensure each card takes 100% of the carousel width */
+    height: 100%;
+    margin-right: 0; /* Remove the margin between cards */
+    overflow: hidden; /* Hide any overflowing content inside cards */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    object-fit: cover;
+    overflow: hidden; /* Hide any overflowing content inside images */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.content-about{
+   height: 300vh;
+
+}
+.content-about p{
+    position: relative;
+    top: 200px;
+    left: 100px;
+    width: 50%;
+    color: white;
+    text-align: justify;
+}
+.content-about .about,
+.content-about .offer,
+.content-about .hiring {
+    position: relative;
+    font-weight: 900;
+    top: 150px;
+    left: 100px;
+    letter-spacing: 3px;
+    font-size: 3em;
+    color: #00194d;
+    width: 30%;
+    text-shadow:
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffff,
+    1px 1px 0 #ffffff;
+}
+.content-about .offer {
+    position: relative;
+    top: 250px;
+    width: 50%;
+}
+.senior{
+    color: white;
+    position: relative;
+    top: 300px;
+    left: 100px;
+    width: 40%;
+}
+.senior h2{
+    position: relative;
+    left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.senior ul{
+    position: relative;
+    left: 100px;
+}
+.senior ul li {
+    margin-bottom: 5px;
+}
+.senior ul li span{
+    position: relative;
+    left: 5px;
+    font-weight: 700;
+}
+.senior ul li a {
+    color: white;
+    text-decoration: none;
+}
+.senior ul li a:hover{
+    text-decoration: underline;
+}
+
+
+
+.college{
+    color: white;
+    position: relative;
+    top: 350px;
+    left: 100px;
+    width: 40%;
+}
+.college h2{
+    position: relative;
+    left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.college ul{
+    position: relative;
+    left: 100px;
+}
+
+.college ul li{
+    margin-bottom: 5px;
+}
+.college ul li span{
+    position: relative;
+    left: 5px;
+    font-weight: 700;
+}
+.college ul li a{
+    color: white;
+    text-decoration: none;
+}
+.college ul li a:hover{
+    text-decoration: underline;
+}
+
+
+.content-about .hiring {
+    position: relative;
+    top: 400px;
+}
+.qualification{
+    position: relative;
+    top: 400px;
+    left: 100px;
+    width: 40%;
+    color: white;
+    margin-top: 50px;
+}
+.qualification .shape{
+    position: absolute;
+    top: -10px;
+    width: 600px;
+    height: 50px;
+    border-radius: 50px;
+    left: 25px;
+    border: 1px solid white;
+    background-color: #000541;
+}
+
+.qualification h2{
+    position: relative;
+    left: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.qualification ul{
+    position: relative;
+    left: 100px;
+}
+
+.qualification ul li{
+    margin-bottom: 10px;
+}
+.qualification ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+.content-signup{
+    height: 100vh;
+}
+
+.content-signup{
+    position: relative;
+    height: 100vh;
+}
+
+
+.content-signup h1 {
+    position: absolute;
+    font-weight: 900;
+    letter-spacing: 20px;
+    top: 30%;
+    left: 50%;
+    color: #00194d;
+    font-size: 7em;
+    transform: translate(-50%, -50%);
+    text-shadow:
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffff,
+    1px 1px 0 #ffffff;
+}
+.content-signup .welcome{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 22%;
+    left: 520px;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.content-signup .form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 500px;
+}
+.content-signup .user-input {
+    position: relative;
+    top: 50%;
+    left: 30%;
+    margin-bottom: 20px;
+
+}
+
+.content-signup .user-input input {
+    width: 200px;
+    height: 35px;
+    margin: 3px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #080a24;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+}
+
+.content-signup .user-input span {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    font-size: 12px;
+    color: gray;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+}
+
+.content-signup .user-input input:valid ~ span {
+    transform: translateX(0px) translateY(-7px);
+    font-size: .6em;
+}
+
+.content-signup .user-input input:valid {
+    padding-top: 23px;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+
+.content-signup button {
+    position: relative;
+    top: 270px;
+    left: 151px;
+    width: 40.5%;
+    height: 32.5px;
+    border-radius: 10px;
+    background-color: #0842ab;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}

@@ -1,0 +1,1142 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080a24;
+    font-family: 'Chivo', sans-serif;
+}
+
+header {
+    position: relative;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #080a24;
+}
+
+header img {
+    position: absolute;
+    width: 90px;
+    top: 10px;
+    left: 100px;
+    z-index: -1;
+}
+
+header ul {
+    position: absolute;
+    top: 5px;
+    right: 100px;
+    list-style: none;
+    text-align: right;
+    z-index: 1;
+} 
+
+header ul li {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 1.1em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #c7c7c7;
+    font-size: .9em;
+    transition: .3s ease-in-out;
+}
+
+header ul li a:hover {
+    color: #ffffff;
+}
+
+header #user{
+    position: relative;
+    width: 50px;
+    left: 0px;
+    top: 19px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu-wrap {
+  position: absolute;
+  top: 80%;
+  right: 110px;
+  width: 290px;
+  display: none;
+}
+
+.menu-wrap.active {
+  display: block;
+}
+
+.menu {
+    background: #00194d;
+    padding: 20px;
+    margin: 10px;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid black;
+    position: relative;
+}
+.user-info{
+    position: relative;
+    display: grid;
+
+}
+.user-info img{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    z-index: 1;
+}
+.user-info h2{
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+.menu-wrap hr{
+    position: relative;
+    top: 130px;
+}
+.menu .menu-list{
+    left: 12px;
+    top: 170px;
+    width: 267px;
+    height: 160px;
+    display: grid;
+    text-align: left;
+    color: white;
+}
+.menu-list li p{
+    display: inline-block;
+    top: 0px;
+    margin: 0;
+    left: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.menu-list li a{
+    display: inline-block;
+    margin: 0;
+    left: 10px;
+    top: 0px;
+    position: relative;
+    font-size: 17px;
+    color: white;
+    font-style: bold;
+    cursor: pointer;
+}
+
+
+
+.menu-content{
+    display: none;
+}
+.menu-content.active{
+    position: absolute;
+    display: block;
+    height: 550px;
+    border: 1px solid black;
+    width: 70%;
+    top: 390%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    z-index: 2;
+}
+.menu-content.active #exit{
+    position: absolute;
+    top: 10px;
+    left: 97%; /* Adjust the value as needed */
+    width: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.list {
+
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid #403f3f;
+}
+.list ul{
+    text-align: left;
+    left: 0px;
+    display: grid;
+    width: 20%;
+}
+.list li{
+    position: relative;
+    top: 170px;
+    left: 0px;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    height: 50px;
+}
+.list li p{
+    font-size: 1.2em;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    left: 30px;
+    top: 10px;
+    width: 0%;
+}
+.list ul img{
+    position: absolute;
+    left: 60px;
+    top: 20px;
+}
+.list ul h1{
+    position: relative;
+    top: 120px;
+    font-size: 1.5em;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.profile{
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    width: 80%;
+    right: 0px;
+    background-color: #04225f;
+
+}
+.profile h1{
+    position: relative;
+    left: 38px;
+    top: 50px;
+    font-family: 'Chivo', sans-serif;
+    color: white;
+}
+/*
+.profile .form-info{
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.form-info .info{
+    position: relative; 
+    top: 30px;
+    margin-bottom: 50px;
+}
+.info input{
+    width: 350px;
+    height: 30px;
+    padding: 10px;
+    border: 5px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    font-family: 'Chivo', sans-serif; 
+}
+.info span{
+    position: absolute;
+    left: 0px;
+    top: -30px;
+    font-weight: 500;
+    font-size: 1em;
+    font-family: 'Chivo', sans-serif;
+} */
+.profile .id-template{
+    position: relative;
+    top: 100px;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.id-template .front{
+    position: relative;
+    border: 1px solid black;
+    width: 29%;
+    height: 100%;
+    border-radius: 10px;
+    margin-right: 5px;
+    color: black;
+}
+.front .bg-color{
+    position: absolute;
+    height: 100%;
+    background-image: url(color.jpg);
+    border-radius: 10px;
+    width: 100%;
+    left: 0px;
+}
+.front .school-info{
+    position: absolute;
+    top: 0px;
+    height: 60px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.school-info img{
+    position: relative;
+    z-index: 1;
+    width: 40px;
+    left: 0px;
+    top: 0px;
+}
+.school-info .school-address{
+    position: relative;
+    top: 0px;
+    color: white;
+    font-size: .5em;
+    width: 60%;
+    text-align: justify;
+    left: 10px;
+    font-weight: normal;
+}
+
+
+
+.id-template .username{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+.username img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.front p,
+.front h2,
+.front h1,
+.front h4,
+.front .student-teacher{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.front p{
+    top: 255px;
+    font-size: .6em;
+}
+.front h2{
+    top: 200px;
+    font-size: 1em;
+}
+.front .course{
+    position: relative;
+    width: 75%;
+    top: 280px;
+    height: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.course h3{
+    text-transform: uppercase;
+    font-size: .7em;
+}
+.front h4{
+    position: relative;
+    top: 220px;
+    font-size: .6em;
+    font-weight: normal;
+}
+.front .student-teacher{
+    position: relative;
+    font-size: .7em;
+    letter-spacing: .3px;
+    top: 205px;
+    font-weight: 500;
+}
+
+.id-template .back{
+    position: relative;
+    border: 1px solid black;
+    height: 100px;
+    width: 29%;
+    height: 100%;
+    border-radius: 10px;
+    margin-left: 5px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #080a24,
+    1px -1px 0 #080a24,
+    -1px 1px 0 #080a24,
+    1px 1px 0 #080a24;
+}
+.back .bg-img{
+    position: absolute;
+    height: 100%;
+    background-image: url(back-color.jpg);
+    border-radius: 10px;
+    width: 100%;
+}
+.back .text{
+    position: absolute;
+    font-size: 1.3em;
+    width: 100%;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back .info{
+    position: relative;
+    height: 60px;
+    top: 100px;
+    color: white;
+}
+.info hr{
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    border: white;
+    height: 1px;
+    transform: translate(-50%, -50%);
+}
+.info .location{
+    position: relative;
+    font-size: .9em;    
+    top: 10px;
+}
+.info .address{
+    position: relative;
+    top: 15px;
+}
+.back .guardian{
+    position: relative;
+    height: 60px;
+    top: 120px;
+    color: white;
+
+}
+.guardian .contact{
+    position: relative;
+    font-size: 1em;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.guardian hr{
+    position: absolute;
+    width: 70%;
+    background-color: white;
+    border: white;
+    height: 1px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.guardian .label{
+    position: relative;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back .student{
+    position: relative;
+    height: 60px;
+    top: 140px;
+    color: white;
+}
+.student hr{
+    position: absolute;
+    width: 70%;
+    background-color: white;
+    border: white;
+    height: 1px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.student .contact{
+    position: relative;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.student .name{
+    position: relative;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.accounting{
+    background-color: white;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    width: 80%;
+    left: 20%;
+    background-color: #04225f;
+}
+.accounting h1{
+    position: relative;
+    left: 38px;
+    top: 50px;
+    font-family: 'Chivo', sans-serif;
+    color: white;
+}
+.accounting .account-info{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.semester{
+    position: relative;
+    top: 0px;
+    left: 30px;
+}
+.semester select{
+    width: 780px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.semester select option{
+    cursor: pointer;
+}
+.semester1,
+.semester2,
+.semester3,
+.semester4{
+    position: absolute;
+    height: 50px;
+    width: 780px;
+    height: 175px;
+}
+.semester1 table,
+.semester2 table,
+.semester3 table,
+.semester4 table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0; 
+    position: relative;
+    top: 10px;
+}
+.semester1 table tr td,
+.semester2 table tr td,
+.semester3 table tr td,
+.semester4 table tr td {
+    border: 1px solid darkgray;
+    padding: 5px;
+    font-weight: bold;
+    background-color: white;
+}
+.semester1 button,
+.semester2 button,
+.semester3 button,
+.semester4 button{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;  
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+}
+.semester1 button img,
+.semester2 button img,
+.semester3 button img,
+.semester4 button img{
+    width: 15px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    margin-right: 5px;
+}
+
+
+
+
+.payment-receipt{
+    position: relative;
+    height: 200px;
+    color: white;
+    top: 150px;
+}
+.payment-receipt a{
+    color: white;
+}
+.payment-receipt p{
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+.payment-receipt p .note{
+    font-style: italic;
+}
+.payment-receipt .bank{
+    height: 60px;
+    position: relative;
+    top: 30px;
+}
+.bank p{
+    top: 0px;
+}
+
+.bank p span{
+    font-weight: bold;
+}
+.facebook{
+    position: relative;
+    top: 40px;
+    height: 60px;
+}
+.facebook p{
+    top: 20px;
+}
+
+
+
+.schedule{
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    width: 80%;
+    left: 20%;
+    background-color: #04225f;
+}
+.schedule h1{
+    position: relative;
+    left: 38px;
+    top: 50px;
+    font-family: 'Chivo', sans-serif;
+    color: white;
+}
+.schedule .account-schedule{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.sched-semester{
+    position: relative;
+    top: 0px;
+    left: 30px;
+}
+.sched-semester select{
+    width: 780px;
+    height: 25px;
+    cursor: pointer;
+}
+.sched-semester1,
+.sched-semester2,
+.sched-semester3,
+.sched-semester4
+{
+    position: relative;
+    top: 10px;
+    max-height: 350px;
+    overflow: auto;
+    width: 820px;
+}
+.sched-semester1 table,
+.sched-semester2 table,
+.sched-semester3 table,
+.sched-semester4 table {
+    width: 97%;
+    border-collapse: collapse;
+    border-spacing: 0; 
+    position: relative;
+    top: 0px;
+
+}
+.sched-semester1 table td,
+.sched-semester2 table td,
+.sched-semester3 table td,
+.sched-semester4 table td {
+    border: 1px solid darkgray;
+    padding: 5px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+.grades{
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    width: 80%;
+    left: 20%;
+    background-color: #04225f;
+}
+
+.grades h1{
+    position: relative;
+    left: 38px;
+    top: 50px;
+    font-family: 'Chivo', sans-serif;
+    color: white;
+}
+.grades .account-grade{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.grade-semester{
+    position: relative;
+    top: 0px;
+    left: 30px;
+}
+.grade-semester select{
+    width: 780px;
+    height: 25px;
+    cursor: pointer;
+}
+.grade-semester1,
+.grade-semester2,
+.grade-semester3,
+.grade-semester4{
+    position: relative;
+    top: 10px;
+    max-height: 350px;
+    overflow: auto;
+    width: 820px;
+}
+.grade-semester table {
+    width: 97%;
+    border-collapse: collapse;
+    border-spacing: 0; 
+    position: relative;
+    top: 0px;
+}
+.grade-semester table tr th{
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    background-color: #0842ab;
+}
+.grade-semester table tr td,
+.grade-semester table tr th {
+    border: 1px solid darkgray;
+    padding: 5px;
+    font-weight: normal;
+}
+.grade-semester table tr td{
+    background-color: white;
+}
+
+.grade-semester table tr .mid{
+    text-align: center;
+}
+
+
+.shop{
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    width: 80%;
+    left: 20%;
+    background-color: #04225f;
+}
+.shop h1{
+    position: relative;
+    left: 38px;
+    top: 50px;
+    font-family: 'Chivo', sans-serif;
+    color: white;
+}
+.shop .select{
+    position: relative;
+    height: 75%;
+    top: 100px;
+}
+.select .mini-navigator {
+    position: absolute;
+    width: 100%; /* Adjust the width as needed */
+    height: 60px;
+}
+
+.mini-navigator ul {
+    position: relative;
+    display: flex;
+
+    height: 100%;
+    list-style: none;
+    left: 0px;
+    top: 0px;
+}
+
+.mini-navigator ul h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    margin-right: 0px; 
+    background-color: #00194d;
+    width: 190px;
+    border-radius: 10px 10px 0px 0px;
+    position: relative;
+    left: 0px;
+    top: 17px;
+    height: 45px;
+    font-size: 1em;
+}
+.mini-navigator ul #tshrt{
+    background-color: #04225f;
+}
+
+
+.select .shop-category{
+    position: absolute;
+
+    background-color: #00194d;
+    height: 85%;
+    width: 100%;
+    bottom: 0px;
+}
+.shop-category .uniform {
+    position: relative;
+    height: 100%;
+}
+
+
+
+
+
+
+.shop-category .tshirt{
+    position: relative;
+    height: 100%;
+    background-color: #00194d;
+}
+.tshirt .video-slider{
+    position: absolute;
+    width: 49%;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #00194d;
+    display: flex;
+    overflow: hidden;
+}
+.video-slider video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.tshirt .control{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.tshirt .control input{
+    cursor: pointer;
+}
+
+
+
+
+
+
+.content{
+    position: relative;
+    height: 100vh;
+}
+.content .annoucement{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    font-size: 3.5em;
+    letter-spacing: 3px;
+    transform: translate(-50%, -50%);
+    color: #00194d;
+    text-shadow:
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffff,
+    1px 1px 0 #ffffff;
+}
+.box {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.big-box {
+    position: relative;
+    height: 100%; 
+    width: 50%;
+    left: 3%;
+
+}
+.big-box video{
+    position: relative;
+    border-radius: 10px;
+    width: 95%;
+    left: 50%;
+    top: 220px;
+    transform: translate(-50%, -50%);
+    outline: none;
+}
+.big-box .info{
+    position: relative;
+    height: 300px;
+    top: 20px;
+    
+    color: white;
+}
+.info h1, 
+.info h3, 
+.info h2, 
+.info p{
+    position: relative;
+    top: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.info h3{
+    top: 70px;
+}
+.info h2, p{
+    top: 100px;
+}
+.info .prof{
+    top: 100px;
+}
+.member {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+    width: 95%;
+    text-align: center;
+}
+
+.memeber ul {
+    list-style: none;
+    padding: 0;
+}
+
+.member ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: .9em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.half {
+    position: absolute;
+    width: 40%;
+    top: 0;
+    right: 50px;
+    height: 100%;
+    overflow: auto;
+}
+
+.minor-box {
+    position: relative; 
+    top: 17px;
+    height: 130px;
+    width: 100%; 
+    border-radius: 10px;
+    border: 2px solid #403f3f;
+    margin-bottom: 50px;
+}
+
+.minor-box .title{
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    top: 15px;
+    left: 25px;
+}
+.minor-box h3{
+    color: white;
+    position: absolute;
+    left: 470px;
+    top: 20px;
+    font-weight: 100;
+    font-style: italic;
+    font-size: .9em;
+}
+.minor-box p{
+    position: relative;
+    width: 90%;
+    text-align: justify;
+    top: 50px;
+    left: 25px;
+    font-size: .9em ;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+.content-2{
+    position: relative;
+    height: 100vh;
+}
+.content-2 h1{
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5em;
+    letter-spacing: 3px;
+    color: #00194d;
+    text-shadow:
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffff,
+    1px 1px 0 #ffffff;
+}
+
+
+
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.user-input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.user-input input {
+    width: 200px;
+    height: 35px;
+    margin: 3px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #080a24;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+}
+
+.user-input span {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    font-size: 12px;
+    color: gray;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+}
+
+.user-input input:valid ~ span {
+    transform: translateX(0px) translateY(-7px);
+    font-size: .6em;
+}
+
+.user-input input:valid {
+    padding-top: 23px;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.user-input p {
+    font-size: .7em;
+    font-style: italic;
+    color: gray;
+    text-align: center;
+    width: 40%;
+}
+.form button {
+    position: absolute;
+    top: 200px;
+    width: 200px;
+    height: 32.5px;
+    border-radius: 10px;
+    background-color: #0842ab;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.year-level {
+  margin-bottom: 10px;
+}
+
+.year-level select {
+  width: 200px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #080a24;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  font-size: 12px;
+}
