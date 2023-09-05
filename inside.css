@@ -279,7 +279,7 @@ header #user{
 .front .bg-color{
     position: absolute;
     height: 100%;
-    background-image: url(color.jpg);
+    background-image: url(img/color.jpg);
     border-radius: 10px;
     width: 100%;
     left: 0px;
@@ -395,7 +395,7 @@ header #user{
 .back .bg-img{
     position: absolute;
     height: 100%;
-    background-image: url(back-color.jpg);
+    background-image: url(img/back-color.jpg);
     border-radius: 10px;
     width: 100%;
 }
